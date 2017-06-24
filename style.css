@@ -4,10 +4,10 @@ html {
     color: #e9e9e9;
 }
 a:link {
-    color: aliceblue;
+    color:	#6495ED;
 }
 a:visited {
-    color:beige;
+    color:#5a86d5;
 }
 .animated {
     animation: fade .5s ease-in;
