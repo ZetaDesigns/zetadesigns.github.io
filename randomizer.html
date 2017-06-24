@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Randomizing Pokemon CIAs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="top">
+<h1 class=animated><font face="arial black">How to randomize 3DS Pokemon games (CIA method)</font></h1>
+</div>
+<div id="main">
+<h2 class=animated2>What you need:</h2>
+<p class=animated2> <b>on your PC:</b> <br>
+•	the latest release of pk3ds ( https://projectpokemon.org/forums/forums/topic/34377-pk3ds-xyoras-rom-editor-randomizer) <br>
+•	the latest release of HackingToolKit3ds (https://github.com/Asia81/HackingToolkit3DS/releases) <br>
+	
+	<b>on your 3ds: </b>
+•	The latest release of Godmode9 (https://github.com/d0k3/GodMode9/releases)
+    1. Creating the CIA
+
+1.1	Physical cartridge <br>
+–	boot Godmode9 by holding [Start] before pressing the power button <br>
+–	Navigate to “[C:]GAMECART” <br>
+–	On your gamecart, you will find <titleID>.trim.3ds <br>
+–	Select this file, then select “NCSD image options... → Build CIA from file” <br>
+–	Shut off your 3ds, take out your SD card and insert it into your PC <br>
+	
+	1.2 Digital game <br>
+
+–	boot Godmode9 by holding [Start] before pressing the power button <br>
+–	Navigate to [A:] SYSNAND SD <br>
+–	Navigate to “title” <br>
+–	Navigate to the first 8 digits of your TitleID <br>
+–	Navigate to the second 8 digits of your TitleID <br>
+–	Navigate to “content” <br>
+–	Press A on the .tmd file <br>
+–	Select TMD file options... → Build CIA (standard) <br>
+
+2. Extracting and randomizing the game <br>
+
+–	Put the CIA you just created in /Packhack/ from the PackEnglishVX.zip <br>
+–	Launch HackingToolKit3ds <br>
+–	Enter CE to extract the contents of your CIA (this will take some time) <br>
+–	You will end up with the two folders “ExtractedRomFS” and “ExtractedExeFS” <br>
+–	Put those two folders into a seperate folder <br>
+–	Open pk3ds, then select the folder you just created (with ExtractedRomFS and ExtractedExeFS inside) <br>
+–	Randomize your game, then save <br>
+–	Put the two folders back into /Packhack/, where the other game files are <br>
+
+
+
+
+3. Rebuilding and installing CIA <br>
+
+–	Launch HackingToolKit3ds again <br>
+–	Enter CR to rebuild the CIA <br> 
+–	When prompted, enter the name for your modded CIA, this will take pretty long<br>
+–	Enter “0” two times<br>
+–	After the CIA has been created, copy it onto your SD, then reinsert it into your 3ds<br>
+–	Launch FBI<br>
+–	Navigate to the CIA on your SD card and install it<br>
+–	Done!
+ 
+
+ </p>
+</div>
+</body>
+</html>
