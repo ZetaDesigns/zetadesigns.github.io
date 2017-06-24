@@ -5,14 +5,15 @@ html {
 }
 
 .animated {
-    animation: fade 3s ease-in;
+    animation: fade .5s ease-in;
 }
-
+.animated2 {
+    animation: fade .5s ease-in;
+}
 @keyframes fade {
     from {
-        opacity 0;
+        opacity: 0;
     }
     to {
-        opacity 1;
+        opacity: 1;
     }
-}
