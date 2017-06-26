@@ -1,66 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Randomizing Pokemon CIAs</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div id="top">
-<h1 class=animated><font face="arial black">How to randomize 3DS Pokemon games (CIA method)</font></h1>
-</div>
-<div id="main">
-<h2 class=animated2>What you need</h2>
-    <p class=animated2> <b>on your PC:</b></p>
-<p class=animated2>•	the latest release of <a href="https://projectpokemon.org/forums/forums/topic/34377-pk3ds-xyoras-rom-editor-randomizer">pk3DS</a> <br>
-•	the latest release of <a href="https://github.com/Asia81/HackingToolkit3DS/releases">HackingToolKit3ds</a> <br>	
-    <br>
-	<b>on your 3ds: <br> </b>
-<br>
-•	The latest release of <a href="https://github.com/d0k3/GodMode9/releases">GodMode9</a>
-    </p>
-    <h2 class=animated2>Section I - Creating the CIA</h2>
-	<h3 class=animated2>Physical cartridge </h3>
-    <p class=animated2>
-1.	Boot GodMode9 by holding down [Start] before pressing the power button <br>
-2.	Navigate to <b>[C:] GAMECART</b> <br>
-        3.	On your gamecart, you will find <b>titleID</b>.trim.3ds <br>
-4.	Select this file, then select “NCSD image options... → Build CIA from file” <br>
-5.	Shut off your 3ds, take out your SD card and insert it into your PC </p>
-    <h3 class=animated2>Digital game</h3>
-    <p class=animated2>
-1.	Boot into GodMode9 by holding [Start] before pressing the power button <br>
-2.	Navigate to [A:] SYSNAND SD <br>
-3.	Navigate to “title” <br>
-4.	Navigate to the first 8 digits of your TitleID <br>
-5.	Navigate to the second 8 digits of your TitleID <br>
-6.	Navigate to “content” <br>
-7.	Press A on the .tmd file <br>
-8.	Select TMD file options... → Build CIA (standard) <br>
-9.	Shut off your 3ds, take out your SD card and insert it into your PC </p>
-<h2 class=animated2>Section II - Extracting and randomizing the game</h2>
-<p class=animated2>
-1.	Put the CIA you just created in /Packhack/ from the PackEnglishVX.zip <br>
-2.	Launch HackingToolKit3ds <br>
-3.	Enter CE to extract the contents of your CIA (this will take some time) <br>
-4.	You will end up with the two folders “ExtractedRomFS” and “ExtractedExeFS” <br>
-5.	Put those two folders into a seperate folder <br>
-6.	Open pk3ds, then select the folder you just created (with ExtractedRomFS and ExtractedExeFS inside) <br>
-7.	Randomize your game, then save <br>
-8.	Put the two folders back into /Packhack/, where the other game files are <br>
-</p>
-<h2 class=animated2>Section III - Rebuilding and installing CIA </h2>
-<p class=animated2>
-1.	Launch HackingToolKit3ds again <br>
-2.	Enter CR to rebuild the CIA <br> 
-3.	When prompted, enter the name for your modded CIA, this will take pretty long<br>
-4.	Enter “0” two times<br>
-5.	After the CIA has been created, copy it onto your SD, then reinsert it into your 3ds<br>
-6.	Launch FBI<br>
-7.	Navigate to the CIA on your SD card and install it<br>
-</p>
-<h3 class=animated2>Done!</h3>
-<p>This guide was written by Slade, and the website was made by Zeta. If you want to contribute to this guide or suggest improvements, you can find the source <a href="https://github.com/ZetaDesigns/zetadesigns.github.io/blob/master/randomizer.html"> here.</a></p>
-</div>
-</body>
-</html>
+  <head>
+    <title>Randomizing PKMN CIAs</title>
+	<link rel="stylesheet" href="main.css" type="text/css">
+  </head>
+  <body>
+    <h1>How to randomize 3DS Pokémon games (CIA)</h1>
+    <p>This guide will show you how to randomize a CIA pokemon game.</p>
+    <p class="warning">This is a permanent change! This guide will create a second cia, which is completely randomized.</p>
+	<h3>What you will need:</h3>
+	<ul>
+        <h4>On your PC:</h4>
+        <ul><li>the latest release of <a href="https://projectpokemon.org/forums/forums/topic/34377-pk3ds-xyoras-rom-editor-randomizer">pk3DS</a></li></ul>
+        <ul><li>the latest release of <a href="https://github.com/Asia81/HackingToolkit3DS/releases">HackingToolKit3DS</a></li></ul>
+        <h4>On your 3DS:</h4>
+        <ul><li>the latest release of <a href="https://github.com/d0k3/GodMode9/releases">GodMode9</a></li></ul>
+	</ul>
+	<hr>
+    <h2>Section I - Creating the CIA</h2>
+	<h3>Physical cartridge:</h3>
+	<ol>
+	  <li>Boot into GodMode9 by holding down <code>Start</code> before pressing the power button</li>
+	  <li>Navigate to <code>[C:] GAMECART</code> </li>
+      <li>On your gamecart, you will find a file called <code><b>titleID</b>.trim.3ds</code></li>
+	  <li>Select this file, then select <code>NCSD image options...</code> and then <code> Build CIA from file</code> </li>
+	  <li>Shut down your console, take out your SD card and insert it into your PC</li>
+	</ol>
+	<hr>
+	<h3>Digital Game:</h3>
+	<ol>
+	<li>Boot into GodMode9 by holding down <code>Start</code> before pressing the power button</li>
+	<li>Navigate to <code>[A:] SYSNAND SD </code></li>
+	<li>Navigate to <code>title</code></li>    
+    <li>Navigate to the first 8 digits of your TitleID</li>
+        <ul><li>If you don't know what your TitleID is, you can look it up <a href="http://www.3dsdb.com/">here</a></li></ul>
+	<li>Navigate to the second 8 digits of your TitleID </li>
+	<li>Navigate to <code>content</code></li>
+    <li>Press A on the .tmd file</li>
+	<li>Select <code>TMD file options</code> and then <code>Build CIA (standard)</code></li>
+    <li>Shut down your console, take out your SD card and insert it into your PC</li>
+    </ol>
+    <hr>
+    <h2>Section II - Extracting and randomizing the game</h2>
+    <ol>
+    <li>Extract the contents of the PackEnglishVX.zip</li>
+    <li>Move the CIA you just created to the <code>PackHack</code> folder from the HackingToolKit</li>
+    <li>Launch SetupUS, and install the ToolKit</li>
+    <li>Launch HackingToolKit3DS</li>
+    <li>Type <code>CE</code> to extract the contents of your CIA</li>
+    <ul><li>This process can take some time</li></ul>
+    <li>Move the <code>ExtractedRomFS</code> and <code>ExtractedExeFS</code> to a seperate folder</li>
+    <li>Launch pk3DS, and open the folder you put <code>ExtractedRomFS</code> and <code>ExtractedExeFS</code> into</li>
+    <li>Randomiz</li>
+    </ol>  
+    <p>Done! You can now launch your game, and it should be randomized!</p>
+    <p class=info>This guide was written by Slade and Zeta, and the website was inspired by <a href="https://3ds.guide">Plailects guide.</a> If you want me to change the CSS, contact me on Discord(Zeta#3515 on Nintendo Homebrew) or write me on <a href="https://gbatemp.net/members/zetadesigns.423818/">GBAtemp</a></p>
+  </body>
+</html>  
