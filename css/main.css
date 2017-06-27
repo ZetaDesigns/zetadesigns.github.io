@@ -20,7 +20,17 @@ a:hover{
 a{
  color:#7694b8; text-decoration:underline
 }
-
+.animated {
+    animation: fade .5s ease-in;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 .warning {
  margin: 2em 0 !important;
  padding: 1em;
@@ -41,7 +51,7 @@ a{
  font-size: 1em !important;
  font-weight: bold;
  text-indent: initial;
- box-shadow: 0 2px 2px rgba(172, 94, 94, 0.25) !important;
+ box-shadow: 0 2px 2px rgba(166, 172, 94, 0.25) !important;
  color: #D8DEE9; !important;
  border-radius: 4px;
 }
