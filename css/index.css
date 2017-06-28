@@ -23,6 +23,9 @@ header::after{
     display: table;
     clear: both;
 }
+p {
+  font-size: 20px;
+}
 .logo {
   float: left;
   padding: 10px 0;
