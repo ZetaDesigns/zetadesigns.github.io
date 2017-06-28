@@ -1,0 +1,91 @@
+*{
+  font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+  color: #d2dcef;
+  line-height: 1.2;
+}
+body {
+    margin: 0;
+    background: #2E3440;
+    font-weight: 300;
+}
+html{
+ background: #2E3440 !important;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+header {
+    background: #434c5e;
+}
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.logo {
+  float: left;
+  padding: 10px 0;
+  font-variant: 
+}
+.banner {
+  overflow: hidden;
+  height: 350px;
+}
+.bannertext{
+  z-index: 10000;
+  font-size: 100px;
+  text-align: center;
+  position: absolute;
+  width: 20%;
+}
+.content {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+.bannertextsmall{
+  padding-top: 190px;
+  padding-left: 85px;
+  z-index: 10000;
+  font-size: 40px;
+  text-align: center;
+  position: absolute;
+  width: 60%;
+}
+nav {
+    float: right;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top:33px;
+  position: relative;
+}
+nav a {
+  color: #d2dcef;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+nav a:hover {
+  color: #d2dcef;
+}
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #d2dcef;
+
+  position: absolute;
+  top: 0%;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+nav a:hover::before {
+  width: 100%;
+}
