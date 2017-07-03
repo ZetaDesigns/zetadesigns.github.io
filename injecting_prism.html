@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<head>
+	<title>Injecting Pokemon Prism Save</title>
+<header>
+<div class="container">
+    <h2 class="logo">Zeta's 3DS Hacking Site</h2>
+<nav>
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="info.html">Information</a></li>
+    <li><a href="guides.html">Guides</a></li>
+    </ul>
+</nav>
+</div>
+</header>
+</head>
+</head>
+<body>
+<h1>Injecting Pokemon Prism Save</h1>
+<p>This guide was written by Rid1 and can also be found on <a href="https://www.reddit.com/r/3dshacks/comments/6kxazn/tutorial_injecting_pokemon_prism_save/">Reddit</a></p>
+<h3>What you will need</h3>
+<ul>
+	<li>Your latest patched Pokemon Prism save file and your installed Pokemon Prism cia</li>
+	<li>A Hex Editor (preferably <a href="https://mh-nexus.de/de/hxd/">HxD</a>, noob friendly)</li>
+</ul>
+<h2>Section I - Creating a fresh save</h2>
+<ol>
+<li>If you havent already play for a few minutes up to the point where you fight your first Shinx, after that you can save.</li>
+<ul><li>Save In Game, NOT using the VC Save State function</li></ul>
+<li>Exit out of the game and open up JKSM</li>
+<li>In the JKSM menu press (A) on <code>SD/CIA</code></li>
+<li>Hit (A) on Pokemon Prism</li>
+<li>Hit (A) on <code>Save Data Options</code></li>
+<li>Hit (A) on <code>Export Save</code></li>
+<li>Hit (A) on new and enter the name <code>Fresh</code> and hit (Start)</li>
+<ul><li>A message box saying "Complete!" should appear if succesful, if not repeat steps 3a-3e It may not prompt you to hit new if you don't have any previously exported saves for Prism</li></ul>
+<li>Exit out of JKSM by hitting (B) a few times and power of your 3ds</li>
+<li>Insert your SD Card into your PC</li>
+</ol>
+<h2>Section II - Injecting the save</h2>
+<ol>
+	<li>Navigate to <code>X:\SD\JKSV\Saves\Pokemon_Prism</code></li>
+	<li>Open the fresh folder, Rightclick on it and hit "Open With" and press Choose Another App, find HxD and tick the box saying "Always use this app to open .sav files"</li>
+	<li>Do the same as Step 2 but for your Pokemon Prism .sav file.</li>
+	<ul><li>Now you should have both sav.dat and your Pokemon Prism .sav file open in HxD</li></ul>
+	<li>In the .sav file in HxD, Copy <b>EVERYTHING</b> up to the 7FF0 line, and replace it in the sav.dat file open in HxD</li>
+	<ul><li>So you are copying everything <b>EXCEPT the very last line</b> from your Pokemon Prism .sav file to the sav.dat*</li></ul>
+	<li>Hit save, and exit out of both instances of HxD.</li>
+	<ul><li>You can discard any changes to your Pokemon Prism .sav file</li></ul>
+</ol>
+<h2>Section III - Importing the save</h2>
+<ol>
+<li>Put the SD Card back into the 3ds and power it on</li>
+<li>Open up JKSM and press (A) on <code>SD/CIA</code></li>
+<li>Hit (A) on <code>Pokemon Prism</code></li>
+<li>Hit (A) on <code>Save Data options</code></li>
+<li>Hit (A) on <code>Import Save</code></li>
+<li>Hit (A) on <code>Fresh</code></li>
+<li>Hit (A) to confirm the action</li>
+<ul><li>A message box saying "Complete!" should appear if succesful, if not repeat steps 3-7</li></ul>
+</ol>
+<p class="info">Special Credit to <a href="https://www.reddit.com/u/Sonlen1414">u/Sonlen1414</a> for essentially telling me how to do this and using up his valuable time :)</p>
+<p>This shouldn't be needed for other non Pokemon games, as I believe the last line of code is the RTC data, and not many older games use a RTC.</p>
+</body>
+</html>
