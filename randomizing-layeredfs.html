@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Randomizing PKMN LGP</title>
+	<link rel="stylesheet" href="css\main.css" type="text/css">
+  </head>
+  <body class="animated">
+<div class="header">
+<div class="container">
+    <div class="logo">
+        <h1>Zeta's 3DS Hacking Site</h1>    
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="guides.html">Guides</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="container">
+<div class="content">
+    <h1>How to randomize 3DS Pokémon games (LayeredFS)</h1>
+    <p>This guide will show you how to randomize a Pokemon game without creating a new CIA.</p>
+    <p class="info">This patch can be disabled any time.</p>
+	<h3>What you will need:</h3>
+	<ul>
+        <h4>On your PC:</h4>
+        <ul><li>the latest release of <a href="https://projectpokemon.org/forums/forums/topic/34377-pk3ds-xyoras-rom-editor-randomizer">pk3DS</a></li></ul>
+        <h4>On your 3DS:</h4>
+        <ul><li>the latest release of <a href="https://github.com/d0k3/GodMode9/releases">GodMode9</a></li></ul>
+	</ul>
+	<hr>
+    <h2>Section I - Dumping RomFS/ExeFS</h2>
+	<h3>Physical cartridge:</h3>
+	<ol>
+	  <li>Boot into GodMode9 by holding down <code>Start</code> before pressing the power button</li>
+	  <li>Navigate to <code>[C:] GAMECART</code> </li>
+      <li>On your gamecart, you will find a file called <code><b>titleID</b>.trim.3ds</code></li>
+	  <li>Select this file, then select <code>NCSD image options...</code> and then <code>Mount image to drive</code> </li>
+	  <li>Navigate to <code>romfs</code> and <code>exefs</code> and mark them by pressing (L) on them</li>
+      <li>Press A after you have both selected, and then select <code>Copy to 0:/gm9out</code></li>
+      <li>After Godmode has finished copying, shut down your console and put your SD cart into your PC</li>
+	</ol>
+	<hr>
+	<h3>Digital Game:</h3>
+	<ol>
+	<li>Boot into GodMode9 by holding down <code>Start</code> before pressing the power button</li>
+	<li>Navigate to <code>[A:] SYSNAND SD </code></li>
+	<li>Navigate to <code>title</code></li>    
+    <li>Navigate to the first 8 digits of your TitleID</li>
+        <ul><li>If you don't know what your TitleID is, you can look it up <a href="http://www.3dsdb.com/">here</a></li></ul>
+	<li>Navigate to the second 8 digits of your TitleID</li>
+	<li>Navigate to <code>content</code></li>
+    <li>Press A on the <b>bigger</b> .app file</li>
+	<li>Select <code>Mount image to drive</code></li>
+    <li>Navigate to <code>romfs</code> and <code>exefs</code> and mark them by pressing (L) on them</li>
+    <li>After Godmode has finished copying, navigate back to <code>titles</code> in <code>[A:] SYSNAND SD</code></li>
+    <li>Now, instead of the first part of your title ID, navigate to <code>0004000e</code> as game updates are stored there</li>
+    <li>Navigate to the second 8 digits of your TitleID </li>
+    <li>Navigate to <code>content</code></li>
+    <li>Select <code>Mount image to drive</code></li>
+    <li>Navigate to <code>exefs</code></li>
+    <li>Press (A) on <code>code</code>, press (A) and select <code>Copy to 0:/gm9out</code></li>
+    <li>After Godmode has finished copying, shut down your console and put your SD cart into your PC</li>
+    <li>On your PC, navigate to <code>/gm9out/</code></li>
+    <li>Copy the .code file and then put it into <code>/exefs/</code></li>
+    <li>Delete <code>code.bin</code> from exefs, but keep .code</li>
+    </ol>
+    <hr>
+    <h2>Section II - Randomizing the game</h2>
+    <ol>
+    <li>Launch pk3DS, and open the folder you put romfs and exefs into</li>
+    <li>Randomize your game, remember what you randomized, pk3ds will save automatically</li>
+    </ol>  
+    <hr>
+    <h2>Section III - Patching the game</h2>
+    <ol>
+        <li>Navigate to <code>/luma/</code> on your SD</li>
+        <li>Inside, of <code>/luma/</code> create a folder named <code>titles</code> if you don't have it already</li>
+        <li>Inside of <code>/luma/titles/</code> create a folder with the TitleID of the game you want to randomize</li>
+        <li>Enter “0” two times</li>
+        <li>Navigate to the pk3ds folder, then go to <code>backups/<b>the folder you randomized in pk3ds</b>/a/</code></li>
+        <li>Inside, you will find these files:<br>
+        <img src="content/file 1.png"></li>
+        <li>The number in the brackets will show you their position in the romfs folder</li>
+        <ul><li>So for example, <code>encdata (a083)</code> is a file named <code>3</code> inside of <code>/a/0/8/</code></li></ul>
+        <li>Navigate to romfs in your randomized folder</li>
+        <li>Navigate to the file you randomized, and remember its location</li>
+        <li>Inside of <code>/romfs/a</code> in your <code>/luma/titles/<b>titleID</b></code> folder, create the path to your randomized files</li>
+        <ul><li>So for our example, you would create <code>/0/8/</code> in <code>/a/</code> and put <code>3</code> (aka encdata) in there</li></ul>
+        <li>Navigate to exefs in your randomized folder</li>
+        <li>Copy <code>.code</code> (Can also be „code.bin“ or „.code.bin“ after pk3ds randomized it)</li>
+        <li>Put that file into /luma/titles/<TitleID>, rename to <code>code.bin</code> if needed</li>
+        <li>Insert your SD back into your device</li>
+        <li>Boot into Luma Config by holding (Select) before pressing the power button</li>
+        <li>Press (A) on <code>Enable Game Patching</code> to enable it and press (Start) to save and reboot</li>
+        <ul><li>If this was enabled already, <b>do not</b> press (A) on it again</li></ul>
+    </ol>
+    <p>Done! You can now launch your game, and it should be randomized!</p>
+    <p class=info>This guide was written by Slade and Zeta. You can contact us on the <a href="https://discord.gg/C29hYvh">Nintendo Homebrew Discord</a></p>
+  </div>
+  </div>
+  </body>
+</html>  
