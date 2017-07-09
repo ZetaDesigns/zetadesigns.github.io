@@ -41,7 +41,9 @@
 	  <li>Select this file, then select <code>NCSD image options...</code> and then <code>Mount image to drive</code> </li>
 	  <li>Navigate to <code>romfs</code> and <code>exefs</code> and mark them by pressing (L) on them</li>
       <li>Press A after you have both selected, and then select <code>Copy to 0:/gm9out</code></li>
-      <li>After Godmode has finished copying, shut down your console and put your SD cart into your PC</li>
+      <li>Navigate back to the main menu</li>
+      <li>Navigate to <code>[A:]SYSNAND SD</code></li>
+      <li>Continue following the „FOR BOTH“ Section“ later in this guide</li>
 	</ol>
 	<hr>
 	<h3>Digital Game:</h3>
@@ -56,8 +58,10 @@
     <li>Press A on the <b>bigger</b> .app file</li>
 	<li>Select <code>Mount image to drive</code></li>
     <li>Navigate to <code>romfs</code> and <code>exefs</code> and mark them by pressing (L) on them</li>
+    <li>Press (A) after you have both selected, and then select <code>Copy to 0:/gm9out</code></li>
     <li>After Godmode has finished copying, navigate back to <code>titles</code> in <code>[A:] SYSNAND SD</code></li>
-    <li>Now, instead of the first part of your title ID, navigate to <code>0004000e</code> as game updates are stored there</li>
+    <h3>FOR BOTH</h3>
+    <li>Navigate to <code>0004000e</code> as game updates are stored there</li>
     <li>Navigate to the second 8 digits of your TitleID </li>
     <li>Navigate to <code>content</code></li>
     <li>Select <code>Mount image to drive</code></li>
@@ -80,7 +84,8 @@
         <li>Navigate to <code>/luma/</code> on your SD</li>
         <li>Inside, of <code>/luma/</code> create a folder named <code>titles</code> if you don't have it already</li>
         <li>Inside of <code>/luma/titles/</code> create a folder with the TitleID of the game you want to randomize</li>
-        <li>Enter “0” two times</li>
+        <li>Inside of <code>/luma/titles/<b>TitleID</b></code>, create a folder named romfs</li>
+        <li>Inside of <code>/romfs/</code> create a folder named <code>a</code></li>
         <li>Navigate to the pk3ds folder, then go to <code>backups/<b>the folder you randomized in pk3ds</b>/a/</code></li>
         <li>Inside, you will find these files:<br>
         <img src="content/File 1.png"></li>
