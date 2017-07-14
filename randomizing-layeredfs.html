@@ -24,6 +24,7 @@
     <h1>How to randomize 3DS Pokémon games (LayeredFS)</h1>
     <p>This guide will show you how to randomize a Pokemon game without creating a new CIA.</p>
     <p class="info">This patch can be disabled any time.</p>
+     <p class="info">Godmode9 scripts will be added soon™</p>
 	<h3>What you will need:</h3>
 	<ul>
         <h4>On your PC:</h4>
@@ -39,9 +40,13 @@
 	  <li>Navigate to <code>[C:] GAMECART</code> </li>
       <li>On your gamecart, you will find a file called <code><b>titleID</b>.trim.3ds</code></li>
 	  <li>Select this file, then select <code>NCSD image options...</code> and then <code>Mount image to drive</code> </li>
+      <li>Navigate to <code>content0.game</code></li>
 	  <li>Navigate to <code>romfs</code> and <code>exefs</code> and mark them by pressing (L) on them</li>
-      <li>Press A after you have both selected, and then select <code>Copy to 0:/gm9out</code></li>
+      <li>Press Y to copy after you have both marked</li>
       <li>Navigate back to the main menu</li>
+      <li>Navigate to <code>[0:] SDCARD</code></li>  
+      <li>Navigate to <code>/gm9/out/</code></li>
+      <li>Press Y again to paste the files</li>
       <li>Navigate to <code>[A:]SYSNAND SD</code></li>
       <li>Continue following the „FOR BOTH“ Section“ later in this guide</li>
 	</ol>
@@ -58,8 +63,9 @@
     <li>Press A on the <b>bigger</b> .app file</li>
 	<li>Select <code>Mount image to drive</code></li>
     <li>Navigate to <code>romfs</code> and <code>exefs</code> and mark them by pressing (L) on them</li>
-    <li>Press (A) after you have both selected, and then select <code>Copy to 0:/gm9out</code></li>
-    <li>After Godmode has finished copying, navigate back to <code>titles</code> in <code>[A:] SYSNAND SD</code></li>
+    <li>Press (Y) after you have both selected, then navigate back to <code>gm9out </code> in <code>[0:]SD CARD</code></li>
+        <ul><li>If <code> gm9out</code> doesn't exist, choose another directory</li></ul>
+    <li>After godmode has finished copying, navigate back to <code>titles</code> in <code>[A:] SYSNAND SD</code></li>
     </ol>
     <hr>
     <h3>FOR BOTH</h3>
