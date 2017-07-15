@@ -23,7 +23,6 @@
 <div class="content">
     <h1>How to randomize 3DS Pokémon games (LayeredFS)</h1>
     <p>This guide will show you how to randomize a Pokemon game without creating a new CIA.</p>
-    <p class="warning">Please note that this guide currently only works for SuMo. Randomizing ORAS/XY is only partially supported.</p>
     <p class="info">This patch can be disabled any time.</p>
      <p class="info">Godmode9 scripts will be added soon™</p>
 	<h3>What you will need:</h3>
@@ -78,16 +77,33 @@
     <li>Press A on the .app file</li>
 	<li>Select <code>Mount image to drive</code></li>
     <li>Navigate to <code>exefs</code></li>
-    <li>Press (A) on <code>code</code>, press (A) and select <code>Copy to 0:/gm9out</code></li>
+    <li>Press (L) on <code>.code</code> to mark it </li>
+        <ul><li>If you're randomizing SuMo, press Y to copy .code</li></ul>
+    <h3>ORAS/XY Only:</h3>    
+    <li>Navigate back to the main directory of the .app</li>
+    <li>Press (L) on <code>/romfs/</code> to mark it</li>
+    <li>Press (Y) to copy both</li>
+    <li>If you are randomizing SuMo, continue here:</li>    
+    <li>Navigate to <code>/gm9/out/</code> </li>
+    <li>Press X+R on the already existing <code>/romfs/</code> to rename it, and name rename to <code>/romfsbase/</code></li>
+        <ul><li>You don't have to rename it if you're randomizing SuMo</li></ul>
+    <li>Press (Y) to paste the <code>/romfs/</code> and <code>.code</code></li>  
+        <ul><li>If you're randomizing SuMo, you only have to copy and paste <code>.code</code></li></ul>    
     <li>After Godmode has finished copying, shut down your console and put your SD cart into your PC</li>
-    <li>On your PC, navigate to <code>/gm9out/</code></li>
+    <li>On your PC, navigate to <code>/gm9/out/</code></li>
     <li>Copy the .code file and then put it into <code>/exefs/</code></li>
-    <li>Delete <code>code.bin</code> from exefs, but keep .code</li>
+    <li>Delete <code>code.bin/.code/.code.bin</code> from exefs, but keep the .code you dumped from the update</li>    
+    <h3>ORAS/XY only:</h3>
+        <ul><li>Navigate to <code>/romfs/</code> in <code>/gm9/out/</code></li></ul>
+        <ul><li>You will see a long list of <code>.cro files,</code> mark and copy them all</li></ul>  
+        <ul><li>Navigate to <code>/romfsbase/</code> and paste</li></ul>
+        <ul><li>When asked if you want to replace existing files, choose yes</li></ul>  
+    <li>Put <code>/exefs/</code> and <code>/romfsbase/</code> or <code>romfs</code>, for SuMo</li> into a seperate folder    
     </ol>
     <hr>
     <h2>Section II - Randomizing the game</h2>
     <ol>
-    <li>Launch pk3DS, and open the folder you put romfs and exefs into</li>
+    <li>Launch pk3DS, and open the folder you put romfsbase and exefs into</li>
     <li>Randomize your game, remember what you randomized, pk3ds will save automatically</li>
     </ol>  
     <hr>
@@ -110,6 +126,8 @@
         <li>Navigate to exefs in your randomized folder</li>
         <li>Copy <code>.code</code> (Can also be „code.bin“ or „.code.bin“ after pk3ds randomized it)</li>
         <li>Put that file into /luma/titles/<TitleID>, rename to <code>code.bin</code> if needed</li>
+        <li>XY/ORAS only:</li>
+            <ul><li>Copy all .cro files in <code>romfsbase</code> and put them in <code>/romfs/</code>in <code>/luma/titles/TitleID/</code></li></ul>
         <li>Insert your SD back into your device</li>
         <li>Boot into Luma Config by holding (Select) before pressing the power button</li>
         <li>Press (A) on <code>Enable Game Patching</code> to enable it and press (Start) to save and reboot</li>
