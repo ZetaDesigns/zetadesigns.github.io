@@ -104,6 +104,8 @@
     <ol>
     <li>Launch pk3DS, and open the folder you put romfsbase and exefs into</li>
     <li>Randomize your game, remember what you randomized, pk3ds will save automatically</li>
+        <ul><li>If prompted, decompress code.bin</li></ul>
+        <ul><li>If code.bin can't be found, rename .code in exefs to code.bin</li></ul>
     </ol>  
     <hr>
     <h2>Section III - Patching the game</h2>
@@ -124,7 +126,7 @@
         <ul><li>So for our example, you would create <code>/0/8/</code> in <code>/a/</code> and put <code>3</code> (aka encdata) in there</li></ul>
         <li>Navigate to exefs in your randomized folder</li>
         <li>Copy <code>.code</code> (Can also be „code.bin“ or „.code.bin“ after pk3ds randomized it)</li>
-        <li>Put that file into /luma/titles/<TitleID>, rename to <code>code.bin</code> if needed</li>
+        <li>Put that file into /luma/titles/TitleID, rename to <code>code.bin</code> if needed</li>
         <li>XY/ORAS only:</li>
             <ul><li>Copy all .cro files in <code>romfsbase</code> and put them in <code>/romfs/</code>in <code>/luma/titles/TitleID/</code></li></ul>
         <li>Insert your SD back into your device</li>
