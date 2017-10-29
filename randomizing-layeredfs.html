@@ -24,12 +24,11 @@
     <h1>How to randomize 3DS Pokémon games (LayeredFS)</h1>
     <p>This guide will show you how to randomize a Pokemon game without creating a new CIA.</p>
     <p class="info">This patch can be disabled any time.</p>
-     <p class="info">Godmode9 scripts will be added soon™</p>
 	<h3>What you will need:</h3>
 	<ul>
         <h4>On your PC:</h4>
         <ul><li>the latest release of <a href="https://projectpokemon.org/forums/forums/topic/34377-pk3ds-xyoras-rom-editor-randomizer">pk3DS</a></li></ul>
-        <ul><li>the latest release of <a href="https://github.com/Jisagi/PokeTool/releases/latest">Jisagi's PokeTool</a></li></ul>
+        <ul><li>the latest release of <a href="https://github.com/Jisagi/PokeTool/releases/latest">Jisagi's PokeTool</a> (<b>Windows only!</b>)</li></ul>
         <h4>On your 3DS:</h4>
         <ul><li>the latest release of <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a></li></ul>
         <ul><li>the latest release of <a href="https://github.com/ZetaDesigns/Pokemon-Randomizing-GM9-Scripts/releases/latest">Zeta's dumping scripts</a></li></ul>
@@ -43,7 +42,10 @@
         <li>Press the Home button</li>
         <li>Navigate to <code>More...</code>-><code>Scripts...</code></li>
         <li>Select the Script to dump your game</li>
-            <ul><li>Always overwrite files when prompted to</li></ul>
+            <ul>
+				<li>Always overwrite files when prompted to</li>
+				<li><b>If your game is a digital copy, the scripts will prompt you to select the correct .app file. This is never <code>00000001</code>. Your's might be <code>00000000</code> or a different number.</b></li>
+			</ul>
         <li>After the the script has finished dumping both the base game and update, shut off your console and insert your SD back into your PC</li>
         <li>Put <code>romfs</code> and <code>exefs</code> from <code>/gm9/out/</code> into an extra folder</li>
 	</ol>
@@ -57,7 +59,8 @@
     </ol>  
     <hr>
     <h2>Section III - Patching the game</h2>
-    <ol>
+    <h4>Windows/Automated</h4>
+	<ol>
         <li>Open Poketool</li>
         <li>Select the game you want to randomize</li>
         <li>Select the backup folder of your game inside <code>/pk3ds/backup/</code> as "Backup Folder"</li>
@@ -66,6 +69,32 @@
         <li>The titleID folder will be in the folder where PokeTool is</li>
         <li>Navigate to your SD card</li>
         <li>Navigate to <code>/luma/titles/</code> and copy the titleID folder there</li>
+        <li>Insert your SD back into your device</li>
+        <li>Boot into Luma Config by holding (Select) before pressing the power button</li>
+        <li>Press (A) on <code>Enable Game Patching</code> to enable it and press (Start) to save and reboot</li>
+        <ul><li>If this was enabled already, <b>do not</b> press (A) on it again</li></ul>
+    </ol>
+	<h4>Mac and Linux/Manual</h4>
+	<ol>
+        <li>Navigate to <code>/luma/</code> on your SD</li>
+        <li>Inside, of <code>/luma/</code> create a folder named <code>titles</code> if you don't have it already</li>
+        <li>Inside of <code>/luma/titles/</code> create a folder with the TitleID of the game you want to randomize</li>
+        <li>Inside of <code>/luma/titles/<b>TitleID</b></code>, create a folder named romfs</li>
+        <li>Inside of <code>/romfs/</code> create a folder named <code>a</code></li>
+        <li>Navigate to the pk3ds folder, then go to <code>/backups/<b>the folder you randomized in pk3ds</b>/a/</code></li>
+        <li>Inside, you will find these files (filesizes and names can vary, please only use your own files as reference):<br>
+        <img src="content/File 1.png"></li>
+        <li>The number in the brackets will show you their position in the romfs folder</li>
+        <ul><li>So for example, <code>encdata (a083)</code> is a file named <code>3</code> inside of <code>/a/0/8/</code></li></ul>
+        <li>Navigate to romfs in your randomized folder</li>
+        <li>Navigate to the file you randomized, and remember its location</li>
+        <li>Inside of <code>/romfs/a</code> in your <code>/luma/titles/<b>titleID</b></code> folder, create the path to your randomized files</li>
+        <ul><li>So for our example, you would create <code>/0/8/</code> in <code>/a/</code> and put <code>3</code> (aka encdata) in there</li></ul>
+        <li>Navigate to exefs in your randomized folder</li>
+        <li>Copy <code>.code</code> (Can also be „code.bin“ or „.code.bin“ after pk3ds randomized it)</li>
+        <li>Put that file into /luma/titles/TitleID, rename to <code>code.bin</code> if needed</li>
+        <li>XY/ORAS only:</li>
+            <ul><li>Copy all .cro files in <code>romfs</code> and put them in <code>/romfs/</code>in <code>/luma/titles/TitleID/</code></li></ul>
         <li>Insert your SD back into your device</li>
         <li>Boot into Luma Config by holding (Select) before pressing the power button</li>
         <li>Press (A) on <code>Enable Game Patching</code> to enable it and press (Start) to save and reboot</li>
