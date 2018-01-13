@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Randomizing VC PKMN LGP</title>
+	<link rel="stylesheet" href="css\main.css" type="text/css">
+  </head>
+  <body class="animated">
+<div class="header">
+<div class="container">
+    <div class="logo">
+        <h1>Zeta's 3DS Hacking Site</h1>    
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="guides.html">Guides</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+<div class="container">
+<div class="content">
+    <h1>How to randomize 3DS Virtual Console Pokémon games (LayeredFS)</h1>
+    <p class="info">This patch can be disabled any time.</p>
+	<h3>What you will need:</h3>
+	<ul>
+        <h4>On your PC:</h4>
+		<ul><li>the latest release of <a href="http://pokehacks.dabomstew.com/randomizer/downloads.php">UPGR</a></li></ul>
+        <h4>On your 3DS:</h4>
+        <ul><li>the latest release of <a href="https://github.com/d0k3/GodMode9/releases/latest">GodMode9</a></li></ul>
+	</ul>
+	<hr>
+    <h2>Section I - Dumping the Rom</h2>
+	<ol>
+		<li>Boot your console while holding start on bootup to get into GodMode9</li>
+		<li>Navigate to <code>/SYSNAND SD/title/00040000/(last 8 digits of the titleid of your vc)</code></li>
+		<ul><li>If you dont know the TitleID of your VC game, you can look it up in FBI -> titles</li></ul>
+		<li>Press A on the bigger .app file, 00000000.app and mount it as an NCCH image</li>
+		<li>Navigate to <code>/romfs/rom</code> and copy the file to your SDCard</li>
+		<li>Insert your SDCard into your computer and copy the file to a place you'll remember</li>
+    </ol>
+	<h2>Section II - Randomizing the Rom</h2>
+	<ol>
+		<li>Rename the rom you dumped to end with .gbc or .gb, depending on your game</li>
+		<li>Open up UPGR and make your changes</li>
+		<li>Rename the randomized rom back to how the rom was named originally</li>
+		<li>Copy the rom to <code>/luma/titles/(titleid of your vc)</code></li>
+		<li>Reinsert the SDCard to your console</li>
+	</ol>
+    <p>Done! You can now launch your game, and it should be randomized!</p>
+    <p class=info>This guide was written by Zeta. You can contact me on the <a href="https://discord.gg/C29hYvh">Nintendo Homebrew Discord</a></p>
+  </div>
+  </div>
+  </body>
+</html>
