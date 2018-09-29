@@ -26,6 +26,9 @@ body {
 .content {
   margin-top: 100px;
 }
+.content-index {
+	margin-top: 0px;
+}
 .nav a {
   color: #d2dcef;
   text-decoration: none;
@@ -85,7 +88,7 @@ a{
  color: #D8DEE9; 
  border-radius: 4px;
 }
-p{
+.blue{
  margin: 2em 0;
  padding: 1em;
  font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
@@ -97,6 +100,16 @@ p{
  color: #D8DEE9; !important;
  border-radius: 4px;
  }
+.banner {
+	width: 100%;
+	display: block;
+}
+.banner > .banner-image {
+	width: 100%;
+	display: block;
+	height: 300px;
+	object-fit: cover;
+}
 li{
   font-size: 1em;
   margin-bottom: 0.5em;
